@@ -1,0 +1,47 @@
+} 
+   "harvestId":"2",
+    "farmerName":"farmer1",
+    "farmerContactInfo":"123",
+    "farmLocation":"locationtest",
+    "harvestDateTime":"23",
+    "harvestQuantity":"200",
+    "chemicalsUsed":"none"
+}
+
+{
+    "collectionId":"11",
+    "clerkName":"testClerk",
+    "clerkContactInfo":"1234",
+    "collectionDateTime":"25",
+    "collectionQuantity":"100",
+    "distributeLocation":"testlocationD",
+    "distributeTemperature":"20",
+    "distributeStorageConditions":"good",
+    "harvestId":"1"
+}
+
+{
+    "distributionId":"111",
+    "distributorName":"testdistributor",
+    "distributorContactInfo":"12345",
+    "deliveryDateTime":"27",
+    "deliveryQuantity":"400",
+    "deliverLocation":"testDelivery",
+    "deliverTemperature":"22",
+    "deliverStorageConditions":"good",
+    "collectionId":"11" 
+}
+
+
+{
+    "supermarketId":"1111",
+    "supermarketName":"testSuper",
+    "supermarketContactInfo":"124556",
+    "supermarketReceiveDateTime":"30",
+    "supermarketQantity":"100",
+    "supermarketPrice":"13",
+    "promotions":"none",
+    "labels":"",
+    "qrCode":"12345",
+    "distributionId":"111"
+}
