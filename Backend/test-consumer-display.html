@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Potato Traceability - Your Food Journey</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 300;
+        }
+        
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .journey-container {
+            padding: 30px;
+        }
+        
+        .journey-step {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+            padding: 20px;
+            border-radius: 15px;
+            background: #f8f9fa;
+            border-left: 5px solid #4CAF50;
+            transition: transform 0.3s ease;
+        }
+        
+        .journey-step:hover {
+            transform: translateX(10px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .step-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: #4CAF50;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+            font-size: 24px;
+            color: white;
+            flex-shrink: 0;
+        }
+        
+        .step-content h3 {
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 1.3em;
+        }
+        
+        .step-details {
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        .step-details strong {
+            color: #4CAF50;
+        }
+        
+        .timeline {
+            position: relative;
+            margin: 20px 0;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 30px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: #4CAF50;
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin-bottom: 20px;
+            padding-left: 60px;
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 24px;
+            top: 8px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #4CAF50;
+            border: 3px solid white;
+            box-shadow: 0 0 0 3px #4CAF50;
+        }
+        
+        .quality-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        
+        .badge {
+            background: #e8f5e8;
+            color: #4CAF50;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: 500;
+        }
+        
+        .footer {
+            background: #f8f9fa;
+            padding: 20px;
+            text-align: center;
+            color: #666;
+            border-top: 1px solid #eee;
+        }
+        
+        .verification {
+            background: #e3f2fd;
+            border: 1px solid #2196F3;
+            border-radius: 10px;
+            padding: 15px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        
+        .verification h4 {
+            color: #1976D2;
+            margin-bottom: 5px;
+        }
+        
+        .verification p {
+            color: #666;
+            font-size: 0.9em;
+        }
+        
+        @media (max-width: 600px) {
+            .journey-step {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .step-icon {
+                margin-right: 0;
+                margin-bottom: 15px;
+            }
+            
+            .timeline::before {
+                left: 15px;
+            }
+            
+            .timeline-item {
+                padding-left: 40px;
+            }
+            
+            .timeline-item::before {
+                left: 9px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🥔 Your Potato Journey</h1>
+            <p>Complete traceability from farm to your table</p>
+        </div>
+        
+        <div class="journey-container">
+            <div class="verification">
+                <h4>✅ Verified by Blockchain</h4>
+                <p>This information is cryptographically secured and cannot be tampered with</p>
+            </div>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="journey-step">
+                        <div class="step-icon">🌾</div>
+                        <div class="step-content">
+                            <h3>Farm Harvest</h3>
+                            <div class="step-details">
+                                <strong>Farmer:</strong> John Smith<br>
+                                <strong>Location:</strong> Kandy, Central Province<br>
+                                <strong>Harvest Date:</strong> 1/13/2024<br>
+                                <strong>Quantity:</strong> 100.50 kg<br>
+                                <strong>Growing Method:</strong> Organic
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="journey-step">
+                        <div class="step-icon">📦</div>
+                        <div class="step-content">
+                            <h3>Collection Center</h3>
+                            <div class="step-details">
+                                <strong>Collection Manager:</strong> Sarah Johnson<br>
+                                <strong>Location:</strong> Kandy Collection Center<br>
+                                <strong>Collection Date:</strong> 1/14/2024<br>
+                                <strong>Storage Temperature:</strong> 18.5°C<br>
+                                <strong>Storage Conditions:</strong> Refrigerated
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="journey-step">
+                        <div class="step-icon">🚚</div>
+                        <div class="step-content">
+                            <h3>Distribution</h3>
+                            <div class="step-details">
+                                <strong>Distributor:</strong> Green Logistics Ltd<br>
+                                <strong>Delivery Location:</strong> Colombo Distribution Hub<br>
+                                <strong>Delivery Date:</strong> 1/15/2024<br>
+                                <strong>Transport Temperature:</strong> 16.0°C<br>
+                                <strong>Storage Method:</strong> Cool Storage
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="journey-step">
+                        <div class="step-icon">🏪</div>
+                        <div class="step-content">
+                            <h3>Supermarket</h3>
+                            <div class="step-details">
+                                <strong>Store:</strong> Fresh Market Super<br>
+                                <strong>Contact:</strong> +94-71-333-4444<br>
+                                <strong>Received Date:</strong> 1/16/2024<br>
+                                <strong>Price:</strong> Rs. 25.50<br>
+                                <strong>Promotions:</strong> 20% Off
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="quality-badges">
+                <div class="badge">Organic</div>
+                <div class="badge">Fresh Harvest</div>
+                <div class="badge">Blockchain Verified</div>
+                <div class="badge">Complete Traceability</div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>🔒 This information is secured by blockchain technology</p>
+            <p>For more details, contact: +94-71-333-4444</p>
+        </div>
+    </div>
+</body>
+</html>

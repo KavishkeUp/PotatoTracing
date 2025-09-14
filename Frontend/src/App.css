@@ -1,0 +1,788 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* IndexPage Styles */
+.index-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #f7f7f7;
+  min-height: 100vh;
+}
+
+.index-page h1 {
+  color: #333;
+  margin: 20px 0;
+}
+
+.tiles-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  width: 100%;
+  max-width: 800px;
+}
+
+.category-tile {
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 150px; /* Adjust height as necessary */
+}
+
+.category-tile:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.category-tile h2 {
+  text-align: center;
+  color: #333;
+  font-size: 1.25rem;
+}
+
+
+/* FarmerLoginPage Styles */
+.farmer-login-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f7f7f7;
+}
+
+.farmer-login-page h1 {
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+.farmer-login-page form {
+  background: white;
+  padding: 2em;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+.farmer-login-page form div {
+  margin-bottom: 1em;
+}
+
+.farmer-login-page form label {
+  display: block;
+  margin-bottom: 0.5em;
+  color: #333;
+}
+
+.farmer-login-page form input {
+  width: 100%;
+  padding: 0.75em;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.farmer-login-page form button {
+  width: 100%;
+  padding: 0.75em;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1em;
+  transition: background-color 0.3s;
+}
+
+.farmer-login-page form button:hover {
+  background-color: #45a049;
+}
+
+.farmer-login-page a {
+  margin-top: 1em;
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.farmer-login-page a:hover {
+  color: #0056b3;
+}
+
+/* Farmer form */
+
+/* Define some CSS variables for colors and spacing for easier theming and adjustments */
+:root {
+  --primary-color: #4CAF50; /* Primary color for buttons and links */
+  --text-color: #333; /* Main text color */
+  --background-color: #fff; /* Background color for inputs and the form */
+  --border-color: #ccc; /* Border color for inputs */
+  --hover-color: #45a049; /* Hover color for buttons */
+  --padding: 0.5rem; /* Padding for inputs and buttons */
+  --border-radius: 4px; /* Border radius for rounded corners */
+}
+
+/* Style the form container */
+.new-record-form {
+  max-width: 500px;
+  margin: auto;
+  padding: 2rem;
+  background-color: var(--background-color);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  border-radius: var(--border-radius);
+}
+
+/* Style form elements */
+.new-record-form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--text-color);
+}
+
+.new-record-form input[type="text"],
+.new-record-form input[type="number"],
+.new-record-form input[type="datetime-local"] {
+  width: 100%;
+  padding: var(--padding);
+  margin-bottom: 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  box-sizing: border-box; /* Ensures padding does not affect the total width */
+}
+
+/* Style the buttons */
+.new-record-form button {
+  padding: var(--padding);
+  border: none;
+  border-radius: var(--border-radius);
+  background-color: var(--primary-color);
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin: 0 8px; /* Adjusts spacing between the buttons */
+  flex-grow: 1;
+}
+
+.new-record-form button:hover {
+  background-color: var(--hover-color);
+}
+
+/* Clear button uses a more subdued style */
+.new-record-form button[type="button"] {
+  background-color: #bbb;
+}
+
+.new-record-form button[type="button"]:hover {
+  background-color: #a0a0a0;
+}
+
+/* Style the link for creating a new farmer */
+.new-farmer-link {
+  display: block;
+  text-align: center;
+  margin-top: 1.5rem;
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.new-farmer-link:hover {
+  color: var(--hover-color);
+}
+
+
+/* PastRecords.css */
+.past-records-container {
+  max-width: 80%;
+  margin: 2rem auto;
+  overflow-x: auto; /* Ensures table is scrollable on small screens */
+}
+
+.past-records-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  font-size: 0.9rem;
+}
+
+.past-records-table th,
+.past-records-table td {
+  text-align: left;
+  padding: 12px;
+  border-bottom: 1px solid #ddd; /* Light grey border for each row */
+}
+
+.past-records-table th {
+  background-color: #4CAF50; /* Green background for headers */
+  color: white;
+}
+
+.past-records-table tr:nth-child(even) {
+  background-color: #f2f2f2; /* Zebra striping for rows */
+}
+
+.past-records-table tr:hover {
+  background-color: #ddd; /* Light grey background on row hover */
+}
+
+/* Button Styles */
+.edit-btn,
+.delete-btn {
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 15px;
+  margin-right: 8px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.edit-btn {
+  background-color: #ffa500; /* Orange background for edit */
+  color: white;
+}
+
+.delete-btn {
+  background-color: #f44336; /* Red background for delete */
+  color: white;
+}
+
+.edit-btn:hover {
+  background-color: #cc8400; /* Darker orange on hover */
+}
+
+.delete-btn:hover {
+  background-color: #d32f2f; /* Darker red on hover */
+}
+
+
+/* Container for the registration form */
+.register-user-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh; /* Full viewport height */
+  background-color: #f7f7f7;
+}
+
+/* Styling the form itself for center alignment */
+.register-user-page form {
+  width: 100%;
+  max-width: 400px; /* Maximum width of the form */
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+}
+
+/* Style for form headings */
+.register-user-page h1 {
+  color: #333;
+  margin-bottom: 24px; /* More space below the heading */
+  text-align: center;
+}
+
+/* Style for labels */
+.register-user-page label {
+  display: block; /* Ensure labels are block level for alignment */
+  margin-bottom: 8px; /* Space below each label */
+  color: #333;
+}
+
+/* Unified style for input fields */
+.register-user-page input[type="text"],
+.register-user-page input[type="password"] {
+  width: calc(100% - 20px); /* Full width minus padding */
+  padding: 10px; /* Comfortable padding around text */
+  margin-bottom: 16px; /* Space below each input field */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* Styles for the action button */
+.register-user-page button {
+  width: 100%; /* Button width matches input fields */
+  padding: 10px 0; /* Padding above and below text */
+  background-color: #4CAF50; /* Vibrant, eye-catching color */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+/* Button hover effect for interactivity */
+.register-user-page button:hover {
+  background-color: #45a049;
+}
+
+
+/* Farmer Dashboard Styles */
+.farmer-dashboard {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.farmer-dashboard h1 {
+  color: #333;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.farmer-dashboard nav {
+  background-color: #f4f4f4;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.farmer-dashboard nav a {
+  text-decoration: none;
+  color: #4CAF50;
+  margin: 0 15px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.farmer-dashboard nav a:hover {
+  color: #388E3C;
+}
+
+/* Style for <Outlet /> content */
+.outlet-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Styles for PastCollections container */
+.past-collections-container {
+  max-width: 960px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  border-radius: 8px;
+}
+
+.past-collections-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.past-collections-table th, .past-collections-table td {
+  text-align: left;
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+}
+
+.past-collections-table th {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.past-collections-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.past-collections-table tr:hover {
+  background-color: #ddd;
+}
+
+/* Styles for action buttons */
+.past-collections-table button {
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  padding: 6px 12px;
+  margin-right: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.past-collections-table .edit-btn {
+  background-color: #ffa500; /* Orange */
+  color: white;
+}
+
+.past-collections-table .delete-btn {
+  background-color: #f44336; /* Red */
+  color: white;
+}
+
+.past-collections-table button:hover {
+  opacity: 0.8;
+}
+
+
+/* Styles for NewRecord form */
+.new-record-form {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  border-radius: 8px;
+}
+
+.new-record-form h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.form-field {
+  margin-bottom: 15px;
+}
+
+.form-field label {
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.form-field input[type="text"],
+.form-field input[type="datetime-local"],
+.form-field input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* Styling form actions (submit and clear buttons) */
+.form-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.form-actions .submit-btn,
+.form-actions .clear-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.form-actions .submit-btn {
+  background-color: #4CAF50; /* Green color for submit */
+  color: white;
+}
+
+.form-actions .clear-btn {
+  background-color: #f44336; /* Red color for clear */
+  color: white;
+}
+
+.form-actions .submit-btn:hover {
+  background-color: #45a049;
+}
+
+.form-actions .clear-btn:hover {
+  background-color: #d32f2f;
+}
+
+/* Unique Distributor Dashboard Styles */
+.distributor-dashboard {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #eceff1;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border-radius: 10px;
+}
+
+.distributor-dashboard h1 {
+  color: #37474f;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.distributor-dashboard nav {
+  background-color: #cfd8dc;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.distributor-dashboard nav a {
+  text-decoration: none;
+  color: #00695c;
+  margin: 0 12px;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.distributor-dashboard nav a:hover {
+  color: #004d40;
+}
+
+.distributor-dashboard {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.distributor-dashboard h1 {
+  color: #333;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.distributor-dashboard nav a {
+  text-decoration: none;
+  color: #007bff;
+  margin: 0 10px;
+  padding: 5px 10px;
+  background: #e7e7e7;
+  border-radius: 5px;
+}
+
+.distributor-dashboard nav a:hover {
+  background: #007bff;
+  color: white;
+}
+
+.supermarket-dashboard {
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 20px;
+  background: #f5f5f5;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.supermarket-dashboard h1 {
+  color: #333;
+  text-align: center;
+}
+
+.supermarket-dashboard nav {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.supermarket-dashboard nav a {
+  color: #0275d8;
+  background-color: #e7e7e7;
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  margin: 0 10px;
+  display: inline-block;
+}
+
+.supermarket-dashboard nav a:hover {
+  background-color: #d9d9d9;
+}
+
+
+.receive-delivery-form {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.receive-delivery-form h2 {
+  color: #444;
+  text-align: center;
+}
+
+.form-field {
+  margin-bottom: 15px;
+}
+
+.form-field label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.form-actions {
+  text-align: right;
+  margin-top: 20px;
+}
+
+.form-actions .submit-btn {
+  background-color: #5cb85c;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.form-actions .submit-btn:hover {
+  background-color: #4cae4c;
+}
+
+.received-deliveries-container {
+  max-width: 800px;
+  margin: 20px auto;
+  overflow-x: auto;
+}
+
+.received-deliveries-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.received-deliveries-table th,
+.received-deliveries-table td {
+  text-align: left;
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+}
+
+.received-deliveries-table th {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.received-deliveries-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.received-deliveries-table tr:hover {
+  background-color: #ddd;
+}
+
+/* Container styling */
+.predict-container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Form styling */
+.predict-form .form-field {
+  margin-bottom: 15px;
+}
+
+.predict-form .form-field label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.predict-form .form-field input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Button styling */
+.form-actions {
+  text-align: center;
+}
+
+.submit-btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+  background-color: #45a049;
+}
+
+/* Animation for prediction result */
+.fade-in {
+  opacity: 0;
+  animation: fadeInEffect 1s forwards;
+}
+
+@keyframes fadeInEffect {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Prediction result styling */
+.prediction-result {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #e2f3e2;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 1.1em;
+}

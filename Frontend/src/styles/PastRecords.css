@@ -1,0 +1,63 @@
+/* PastRecords.css */
+.past-records-container {
+    max-width: 80%;
+    margin: 2rem auto;
+    overflow-x: auto; /* Ensures table is scrollable on small screens */
+  }
+  
+  .past-records-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+    font-size: 0.9rem;
+  }
+  
+  .past-records-table th,
+  .past-records-table td {
+    text-align: left;
+    padding: 12px;
+    border-bottom: 1px solid #ddd; /* Light grey border for each row */
+  }
+  
+  .past-records-table th {
+    background-color: #4CAF50; /* Green background for headers */
+    color: white;
+  }
+  
+  .past-records-table tr:nth-child(even) {
+    background-color: #f2f2f2; /* Zebra striping for rows */
+  }
+  
+  .past-records-table tr:hover {
+    background-color: #ddd; /* Light grey background on row hover */
+  }
+  
+  /* Button Styles */
+  .edit-btn,
+  .delete-btn {
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 15px;
+    margin-right: 8px;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .edit-btn {
+    background-color: #ffa500; /* Orange background for edit */
+    color: white;
+  }
+  
+  .delete-btn {
+    background-color: #f44336; /* Red background for delete */
+    color: white;
+  }
+  
+  .edit-btn:hover {
+    background-color: #cc8400; /* Darker orange on hover */
+  }
+  
+  .delete-btn:hover {
+    background-color: #d32f2f; /* Darker red on hover */
+  }
+  

@@ -1,0 +1,21 @@
+# Database Configuration
+MONGODB_URI=mongodb://localhost:27017/test-db
+# For Azure Cosmos DB, use: mongodb://potato-traceability:YOUR_PASSWORD@potato-traceability.mongo.cosmos.azure.com:10255/?ssl=true&replicaSet=globaldb
+
+# JWT Configuration
+JWT_SECRET=your-super-secret-jwt-key-here
+
+# Server Configuration
+PORT=8080
+NODE_ENV=production
+
+# Azure Configuration
+AZURE_STORAGE_CONNECTION_STRING=your-azure-storage-connection-string
+AZURE_CONTAINER_NAME=potato-images
+
+# Blockchain Configuration
+VALIDATOR_URL=tcp://localhost:4004
+REST_API_URL=http://localhost:8008
+
+# CORS Configuration
+CORS_ORIGIN=https://your-frontend-domain.azurestaticapps.net

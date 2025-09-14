@@ -1,0 +1,133 @@
+{
+    "sample_inputs": [
+        {
+            "name": "Normal Conditions - Good Weather",
+            "description": "Typical conditions with good weather and standard potato variety",
+            "input": {
+                "temp": 25,
+                "disaster": "none",
+                "condition": "good",
+                "variety": "russet",
+                "rainfall": 80,
+                "origin": "Kandy",
+                "organic": "no",
+                "location": "Colombo"
+            },
+            "expected_price_range": "LKR 200-350"
+        },
+        {
+            "name": "Hot Weather + Flood Conditions",
+            "description": "Challenging conditions with high temperature and flood disaster",
+            "input": {
+                "temp": 35,
+                "disaster": "flood",
+                "condition": "poor",
+                "variety": "organic",
+                "rainfall": 200,
+                "origin": "Galle",
+                "organic": "yes",
+                "location": "Colombo"
+            },
+            "expected_price_range": "LKR 300-500"
+        },
+        {
+            "name": "Cold Weather + Drought",
+            "description": "Cold weather with drought conditions affecting crop quality",
+            "input": {
+                "temp": 10,
+                "disaster": "drought",
+                "condition": "excellent",
+                "variety": "red",
+                "rainfall": 20,
+                "origin": "Nuwara Eliya",
+                "organic": "no",
+                "location": "Kandy"
+            },
+            "expected_price_range": "LKR 250-400"
+        },
+        {
+            "name": "Optimal Growing Conditions",
+            "description": "Perfect conditions for potato growth and pricing",
+            "input": {
+                "temp": 20,
+                "disaster": "none",
+                "condition": "excellent",
+                "variety": "yellow",
+                "rainfall": 100,
+                "origin": "Badulla",
+                "organic": "yes",
+                "location": "Matara"
+            },
+            "expected_price_range": "LKR 300-450"
+        },
+        {
+            "name": "Storm Conditions",
+            "description": "Storm disaster affecting supply chain",
+            "input": {
+                "temp": 28,
+                "disaster": "storm",
+                "condition": "average",
+                "variety": "russet",
+                "rainfall": 150,
+                "origin": "Trincomalee",
+                "organic": "no",
+                "location": "Jaffna"
+            },
+            "expected_price_range": "LKR 250-400"
+        }
+    ],
+    "api_usage": {
+        "endpoint": "POST http://localhost:8080/predict_potato_prices",
+        "headers": {
+            "Content-Type": "application/json",
+            "Authorization": "Bearer YOUR_AUTH_TOKEN_HERE"
+        },
+        "example_request": {
+            "temp": 25,
+            "disaster": "none",
+            "condition": "good",
+            "variety": "russet",
+            "rainfall": 80,
+            "origin": "Kandy",
+            "organic": "no",
+            "location": "Colombo"
+        },
+        "example_response": {
+            "predicted_price": 285.50,
+            "prediction_method": "Random Forest ML Model",
+            "confidence": 0.85,
+            "test": {
+                "result": "Transaction submitted successfully",
+                "message": "Prediction transaction submitted",
+                "owner": "user_public_key"
+            },
+            "message": "Price prediction completed successfully."
+        }
+    },
+    "parameter_explanations": {
+        "temp": "Temperature in Celsius (0-50°C)",
+        "disaster": "Disaster condition affecting supply",
+        "condition": "Quality of the potato crop",
+        "variety": "Type of potato variety",
+        "rainfall": "Rainfall amount in millimeters",
+        "origin": "Location where potatoes are grown",
+        "organic": "Whether potatoes are organically grown",
+        "location": "Market location where potatoes are sold"
+    },
+    "valid_values": {
+        "disaster": [ "none", "flood", "drought", "storm" ],
+        "condition": [ "excellent", "good", "average", "poor" ],
+        "variety": [ "organic", "russet", "red", "yellow" ],
+        "organic": [ "yes", "no" ],
+        "origin_locations": [
+            "Kandy", "Jaffna", "Anuradhapura", "Galle", "Trincomalee",
+            "Kurunegala", "Ratnapura", "Badulla", "Polonnaruwa", "Matara",
+            "Colombo", "Nuwara Eliya", "Batticaloa", "Ampara", "Monaragala"
+        ],
+        "market_locations": [
+            "Kandy", "Jaffna", "Anuradhapura", "Galle", "Trincomalee",
+            "Kurunegala", "Ratnapura", "Badulla", "Polonnaruwa", "Matara",
+            "Colombo", "Nuwara Eliya", "Batticaloa", "Ampara", "Monaragala"
+        ]
+    }
+}

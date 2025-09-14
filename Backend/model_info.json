@@ -1,0 +1,129 @@
+{
+  "model_type": "RandomForestRegressor",
+  "feature_columns": [
+    "harvestMonth",
+    "daysFromHarvestToCollection",
+    "daysFromCollectionToDistribution",
+    "daysFromDistributionToSupermarket",
+    "totalDaysInSupplyChain",
+    "harvestQuantity",
+    "collectionQuantity",
+    "distributionQuantity",
+    "supermarketQuantity",
+    "collectionLossPercent",
+    "distributionLossPercent",
+    "supermarketLossPercent",
+    "origin",
+    "marketLocation",
+    "chemicalsUsed",
+    "collectionStorageConditions",
+    "distributionStorageConditions",
+    "collectionTemperature",
+    "distributionTemperature",
+    "promotions",
+    "labels",
+    "season_encoded"
+  ],
+  "training_stats": {
+    "total_records": 101,
+    "clean_records": 101,
+    "train_records": 80,
+    "test_records": 21,
+    "train_mae": 1154.5657269827134,
+    "test_mae": 902.0112783635678,
+    "train_rmse": 5051.496326700176,
+    "test_rmse": 2323.1377428119727,
+    "train_r2": 0.4946447423805125,
+    "test_r2": -34509.59255007903
+  },
+  "feature_importance": [
+    {
+      "feature": "harvestQuantity",
+      "importance": 0.2720936793818647
+    },
+    {
+      "feature": "collectionTemperature",
+      "importance": 0.26771494240043187
+    },
+    {
+      "feature": "collectionQuantity",
+      "importance": 0.11493018037916591
+    },
+    {
+      "feature": "origin",
+      "importance": 0.07884684277357008
+    },
+    {
+      "feature": "daysFromHarvestToCollection",
+      "importance": 0.03426916765925162
+    },
+    {
+      "feature": "daysFromCollectionToDistribution",
+      "importance": 0.026864152817638733
+    },
+    {
+      "feature": "promotions",
+      "importance": 0.024095740937834637
+    },
+    {
+      "feature": "distributionQuantity",
+      "importance": 0.021819361585602822
+    },
+    {
+      "feature": "collectionLossPercent",
+      "importance": 0.021394039416585055
+    },
+    {
+      "feature": "chemicalsUsed",
+      "importance": 0.02033469098915503
+    },
+    {
+      "feature": "daysFromDistributionToSupermarket",
+      "importance": 0.018181691505757734
+    },
+    {
+      "feature": "distributionTemperature",
+      "importance": 0.017153986095273997
+    },
+    {
+      "feature": "supermarketQuantity",
+      "importance": 0.016300977334997812
+    },
+    {
+      "feature": "totalDaysInSupplyChain",
+      "importance": 0.012006765817719795
+    },
+    {
+      "feature": "supermarketLossPercent",
+      "importance": 0.011832994835055715
+    },
+    {
+      "feature": "season_encoded",
+      "importance": 0.00966489918766567
+    },
+    {
+      "feature": "collectionStorageConditions",
+      "importance": 0.009589820269400725
+    },
+    {
+      "feature": "harvestMonth",
+      "importance": 0.00847348957499774
+    },
+    {
+      "feature": "labels",
+      "importance": 0.006038395775457018
+    },
+    {
+      "feature": "distributionLossPercent",
+      "importance": 0.004957882488079084
+    },
+    {
+      "feature": "distributionStorageConditions",
+      "importance": 0.003436298774494417
+    },
+    {
+      "feature": "marketLocation",
+      "importance": 0.0
+    }
+  ]
+}
